@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Card } from "./components/Card"
+import { RatingContent } from './components/RatingContent';
 import * as Styles from "./styles"
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
 
   return (
     <Styles.App>
-      <Card selectedRating={selectedRating} setSelectedRating={setSelectedRating}/>
+      <Styles.Card>
+        <RatingContent selectedRating={selectedRating} setSelectedRating={setSelectedRating} />
+      </Styles.Card>
     </Styles.App>
   )
 }
