@@ -14,6 +14,11 @@ export const Card = ({ setSelectedRating, selectedRating }: CardProps) => {
 
   const ratingList = [ 1, 2, 3, 4, 5];
   
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault();
+    console.log(selectedRating)
+  }
+
   return(
     <StyledCard>
       <HeaderCard>
@@ -22,7 +27,7 @@ export const Card = ({ setSelectedRating, selectedRating }: CardProps) => {
         </CirleComponent>
       </HeaderCard>
       <CardText>
-      <Title> How did we do ? </Title>
+      <Title>How did we do ?</Title>
       <p>
         Please let us know we did with your support request. 
         All feedback is appreciated to help us improve our offering!
@@ -39,7 +44,7 @@ export const Card = ({ setSelectedRating, selectedRating }: CardProps) => {
           ))
         }
       </ListNumber>
-      <Button>
+      <Button onClick={handleClick}>
         SUBMIT
       </Button>
     </StyledCard>
